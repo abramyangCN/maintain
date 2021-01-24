@@ -20,8 +20,6 @@
         .svg-container {
             width: 100%;
             height: 100%;
-            -webkit-filter: drop-shadow(-10px 25px 25px rgba(26, 58, 70, 0.7));
-            filter: drop-shadow(-10px 25px 25px rgba(26, 58, 70, 0.7));
         }
 
         svg {
@@ -137,7 +135,30 @@
     <div class="svg-container">
 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1280" id="svgLogo">
+            <defs>
+                <!-- Filter declaration -->
+                <filter id="MyFilter" filterUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
 
+                    <!-- offsetBlur -->
+                    <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur" />
+                    <feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
+
+                    <!-- litPaint -->
+                    <feSpecularLighting in="blur" surfaceScale="5" specularConstant=".75" specularExponent="20"
+                        lighting-color="#bbbbbb" result="specOut">
+                        <fePointLight x="-5000" y="-10000" z="20000" />
+                    </feSpecularLighting>
+                    <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut" />
+                    <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"
+                        result="litPaint" />
+
+                    <!-- merge offsetBlur + litPaint -->
+                    <feMerge>
+                        <feMergeNode in="offsetBlur" />
+                        <feMergeNode in="litPaint" />
+                    </feMerge>
+                </filter>
+            </defs>
             <style>
                 svg * {
                     -webkit-transform-origin: center;
@@ -147,7 +168,7 @@
 
             </style>
 
-            <g id="layer" class="svg-logo" transform-origin="center" transform="scale(1 1)">
+            <g id="layer" class="svg-logo" transform-origin="center" transform="scale(1 1)" filter="url(#MyFilter)">
                 <g id="layer_v" class="animate-translate2top">
                     <path id="v"
                         d="M829.52,662.38C823,813.75,750.46,948,640,1037.13,529.54,948,457,813.75,450.48,662.38a509.61,509.61,0,0,0-123.68,71.1C355.65,930.6,474.35,1098.55,640,1194.37c165.65-95.82,284.35-263.77,313.2-460.89A509.61,509.61,0,0,0,829.52,662.38Z">
@@ -158,7 +179,8 @@
                 </g>
                 <g id="layer_i_a">
                     <g id="layer_i" class="animate-translate2bottom">
-                        <path id="i" d="M640,420.53a388.17,388.17,0,0,1,0,438.94,388.17,388.17,0,0,1,0-438.94Z" />
+                        <path id="i"
+                            d="M640,420.53a388.17,388.17,0,0,1,0,438.94,388.17,388.17,0,0,1,0-438.94Z" />
                     </g>
                     <g id="layer_a" class="animate-translate2bottom">
                         <path id="a"
