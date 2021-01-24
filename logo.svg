@@ -1,15 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1280" transform-origin="center center" class="animate">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1280" class="animate">
 
     <style>
-        .globalLayer {
-            -webkit-transform-origin: center center;
-            transform-origin: center center;
+        svg, .globalLayer {
+            -webkit-transform-origin: center;
+            transform-origin: center;
             transform-box: fill-box;
             -webkit-transform-box: fill-box;
         }
     </style>
 
-    <g id="layer" class="globalLayer" transform-origin="center center" transform="scale(0 1)">
+    <g id="layer" class="globalLayer" transform-origin="center" transform-box="fill-box" transform="scale(0 1)">
         <g id="layer_v" class="animate-translate2top">
             <path id="v"
                 d="M957.23,709.25A759.17,759.17,0,0,0,829.42,664.4c-6.8,151.19-79.17,285.3-189.35,374.59-110.46-88.94-183.2-222.81-190.5-373.85a759.43,759.43,0,0,0-126.8,45c22.6,207.75,144.46,385.7,317.18,485.41C812.92,1095.68,934.88,917.38,957.23,709.25Z">
