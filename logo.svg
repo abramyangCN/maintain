@@ -4,6 +4,8 @@
         .animate {
             -webkit-transform-origin: center center;
             transform-origin: center center;
+            transform-box: fill-box;
+            -webkit-transform-box: fill-box;
         }
 
         .animate-translate2top {
