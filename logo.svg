@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1280" class="animate">
 
     <style>
-        .globalLayer {
-            //-webkit-transform-origin: center;
-            //transform-origin: center;
+        svg * {
+            -webkit-transform-origin: center;
+            transform-origin: center;
             transform-box: fill-box;
             -webkit-transform-box: fill-box;
         }
