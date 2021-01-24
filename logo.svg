@@ -2,6 +2,7 @@
 
     <style>
         svg * {
+            -webkit-transform-origin: center;
             transform-origin: center;
             transform-box: fill-box;
         }
