@@ -16,7 +16,7 @@
         }
 
     </style>
-    <g id="layer" transform-origin="50% 50%">
+    <g id="layer" transform-origin="50% 50%" transform="scale(0 1)">
         <g id="layer_v" class="animate-translate2top">
             <path id="v"
                 d="M957.23,709.25A759.17,759.17,0,0,0,829.42,664.4c-6.8,151.19-79.17,285.3-189.35,374.59-110.46-88.94-183.2-222.81-190.5-373.85a759.43,759.43,0,0,0-126.8,45c22.6,207.75,144.46,385.7,317.18,485.41C812.92,1095.68,934.88,917.38,957.23,709.25Z">
@@ -38,11 +38,11 @@
             <animateTransform attributeName="transform" attributeType="XML" type="translate" begin="layerAnimation.end"
                 values="0 0; 0 -25; 0 256" keyTimes="0; 0.5; 1" fill="freeze" dur="1.5s" repeatCount="" />
         </g>
-        <animateTransform id="layerAnimation" attributeName="transform" attributeType="XML" dur="0.5s" from="0 1"
+        <animateTransform id="layerAnimation" attributeName="transform" begin="0.5s" attributeType="XML" dur="0.5s" from="0 1"
             to="1 1" fill="freeze" repeatCount="" type="scaleX" calcMode="linear"></animateTransform>
         <animateTransform attributeName="transform" attributeType="XML" begin="layerVAnimation.end" dur="1s"
-            values="1 1; 1 1; 10 10" keyTimes="0; 0.25; 1" fill="freeze" repeatCount="" type="scale" calcMode="linear"></animateTransform>
+            values="1 1; 1 1; 10 10" keyTimes="0; 0.5; 1" fill="freeze" repeatCount="" type="scale" calcMode="linear"></animateTransform>
         <animate attributeName="opacity" attributeType="XML" begin="layerVAnimation.end" dur="1s"
-            values="1; 1; 0" keyTimes="0; 0.25; 1" fill="freeze" repeatCount="" type="opacity" calcMode="linear"></animate>
+            values="1; 1; 0" keyTimes="0; 0.5; 1" fill="freeze" repeatCount="" type="opacity" calcMode="linear"></animate>
     </g>
 </svg>
