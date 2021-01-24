@@ -13,7 +13,7 @@
             animation: crafting 4s 0.5s;
         }
 
-        @-webkit-keyframes scaleX {
+        @-webkit-keyframes crafting {
             0% {
                 -webkit-transform: scale(0, 1);
             }
@@ -22,7 +22,30 @@
                 -webkit-transform: scale(1, 1);
             }
 
-            80% {
+            60% {
+                -webkit-transform: scale(1, 1);
+            }
+
+            70% {
+                -webkit-transform: scale(1.1, 0.95) rotate(0deg)
+
+            }
+
+            74% {
+                -webkit-transform: scale(1.1, 0.95) rotate(-5deg)
+
+            }
+
+            78% {
+                -webkit-transform: scale(1.1, 0.95) rotate(5deg)
+
+            }
+
+            82% {
+                -webkit-transform: scale(1.1, 0.95) rotate(0deg)
+            }
+
+            90% {
                 -webkit-transform: scale(1, 1);
                 opacity: 1;
 
@@ -43,7 +66,30 @@
                 transform: scale(1, 1);
             }
 
-            80% {
+            60% {
+                transform: scale(1, 1);
+            }
+
+            70% {
+                transform: scale(1.1, 0.95) rotate(0deg)
+
+            }
+
+            74% {
+                transform: scale(1.1, 0.95) rotate(-5deg)
+
+            }
+
+            78% {
+                transform: scale(1.1, 0.95) rotate(5deg)
+
+            }
+
+            82% {
+                transform: scale(1.1, 0.95) rotate(0deg)
+            }
+
+            90% {
                 transform: scale(1, 1);
                 opacity: 1;
 
