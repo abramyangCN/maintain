@@ -136,27 +136,12 @@
 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1280" id="svgLogo">
             <defs>
-                <!-- Filter declaration -->
-                <filter id="MyFilter" filterUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
-
-                    <!-- offsetBlur -->
-                    <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="blur" />
-                    <feOffset in="blur" dx="10" dy="10" result="offsetBlur" />
-
-                    <!-- litPaint -->
-                    <feSpecularLighting in="blur" surfaceScale="5" specularConstant=".5" specularExponent="20"
-                        lighting-color="#bbbbbb" result="specOut">
-                        <fePointLight x="-5000" y="-10000" z="20000" />
-                    </feSpecularLighting>
-                    <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut" />
-                    <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"
-                        result="litPaint" />
-
-                    <!-- merge offsetBlur + litPaint -->
-                    <feMerge>
-                        <feMergeNode in="offsetBlur" />
-                        <!-- <feMergeNode in="litPaint" /> -->
-                    </feMerge>
+                <filter id="f4" x="-0.5" y="-0.5" width="200%" height="200%">
+                    <feOffset result="offOut" in="SourceGraphic" dx="50" dy="50" />
+                    <feColorMatrix result="matrixOut" in="offOut" type="matrix"
+                    values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.6 0" />
+                    <feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="50" />
+                    <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
                 </filter>
             </defs>
             <style>
@@ -168,41 +153,7 @@
 
             </style>
 
-            <g id="layer" class="svg-logo" transform-origin="center" transform="scale(1 1)" filter="url(#MyFilter)">
-                <g id="layer_v" class="animate-translate2top">
-                    <path id="v"
-                        d="M829.52,662.38C823,813.75,750.46,948,640,1037.13,529.54,948,457,813.75,450.48,662.38a509.61,509.61,0,0,0-123.68,71.1C355.65,930.6,474.35,1098.55,640,1194.37c165.65-95.82,284.35-263.77,313.2-460.89A509.61,509.61,0,0,0,829.52,662.38Z">
-                    </path>
-                    <animateTransform id="layerVAnimation" attributeName="transform" attributeType="XML"
-                        type="translate" begin="layerAnimation.end" keyTimes="0; 0.5; 1" values="0 0; 0 25; 0 -350"
-                        fill="freeze" dur="1.5s" repeatCount="" />
-                </g>
-                <g id="layer_i_a">
-                    <g id="layer_i" class="animate-translate2bottom">
-                        <path id="i"
-                            d="M640,420.53a388.17,388.17,0,0,1,0,438.94,388.17,388.17,0,0,1,0-438.94Z" />
-                    </g>
-                    <g id="layer_a" class="animate-translate2bottom">
-                        <path id="a"
-                            d="M450.48,662.38Q450,651.25,450,640c0-160.48,74.12-303.65,190-397.13C755.88,336.35,830,479.52,830,640q0,11.25-.48,22.38a509.61,509.61,0,0,1,123.68,71.1A644.65,644.65,0,0,0,960,640c0-236.89-128.71-443.71-320-554.37C448.71,196.29,320,403.11,320,640a644.65,644.65,0,0,0,6.8,93.48A509.61,509.61,0,0,1,450.48,662.38Z">
-                        </path>
-                    </g>
-                    <animateTransform attributeName="transform" attributeType="XML" type="translate"
-                        begin="layerAnimation.end" values="0 0; 0 -25; 0 150" keyTimes="0; 0.5; 1" fill="freeze"
-                        dur="1.5s" repeatCount="" />
-                </g>
-                <animateTransform id="layerAnimation" attributeName="transform" begin="0.5s" attributeType="XML"
-                    dur="0.5s" from="0 1" to="1 1" fill="freeze" repeatCount="" type="scaleX" calcMode="linear">
-                </animateTransform>
-                <animateTransform attributeName="transform" attributeType="XML" begin="layerVAnimation.end" dur="1s"
-                    values="1 1; 1 1; 10 10" keyTimes="0; 0.5; 1" fill="freeze" repeatCount="" type="scale"
-                    calcMode="linear">
-                </animateTransform>
-                <animate attributeName="opacity" attributeType="XML" begin="layerVAnimation.end" dur="1s"
-                    values="1; 1; 0" keyTimes="0; 0.5; 1" fill="freeze" repeatCount="" type="opacity" calcMode="linear">
-                </animate>
-            </g>
-            <g id="layer" class="svg-logo" transform-origin="center" transform="scale(1 1)" >
+            <g id="layer" class="svg-logo" transform-origin="center" transform="scale(1 1)" filter="url(#f4)">
                 <g id="layer_v" class="animate-translate2top">
                     <path id="v"
                         d="M829.52,662.38C823,813.75,750.46,948,640,1037.13,529.54,948,457,813.75,450.48,662.38a509.61,509.61,0,0,0-123.68,71.1C355.65,930.6,474.35,1098.55,640,1194.37c165.65-95.82,284.35-263.77,313.2-460.89A509.61,509.61,0,0,0,829.52,662.38Z">
