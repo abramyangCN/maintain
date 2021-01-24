@@ -45,7 +45,7 @@
         </g>
         <animateTransform id="layerAnimation" attributeName="transform" begin="0.5s" attributeType="XML" dur="0.5s"
             from="0 1" to="1 1" fill="freeze" repeatCount="" type="scaleX" calcMode="linear"></animateTransform>
-        <animateTransform attributeName="transform" attributeType="XML" begin="layerVAnimation.end" dur="1s"
+        <animateTransform attributeName="transform" transform-origin="center center" attributeType="XML" begin="layerVAnimation.end" dur="1s"
             values="1 1; 1 1; 10 10" keyTimes="0; 0.5; 1" fill="freeze" repeatCount="" type="scale" calcMode="linear">
         </animateTransform>
         <animate attributeName="opacity" attributeType="XML" begin="layerVAnimation.end" dur="1s" values="1; 1; 0"
