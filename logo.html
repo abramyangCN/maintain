@@ -6,22 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>logo</title>
     <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
 
-       * {
-           padding: 0;
-           margin: 0;
-       }
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
 
-       body, html {
-           width: 100%;
-           height: 100%;
-       }
+        svg {
+            width: 100%;
+            height: 100%;
+            filter:drop-shadow(-10px 25px 25px rgba(26,58,70,0.7));
+        }
 
-       svg {
-           width: 100%;
-           height: 100%;
-       }
-        
 
         svg * {
             -webkit-transform-origin: center;
@@ -34,6 +35,7 @@
             transform: scale(0, 1);
             animation: crafting 4s 0.5s;
         }
+
 
         @-webkit-keyframes crafting {
             0% {
@@ -154,8 +156,9 @@
                         d="M450.48,662.38Q450,651.25,450,640c0-160.48,74.12-303.65,190-397.13C755.88,336.35,830,479.52,830,640q0,11.25-.48,22.38a509.61,509.61,0,0,1,123.68,71.1A644.65,644.65,0,0,0,960,640c0-236.89-128.71-443.71-320-554.37C448.71,196.29,320,403.11,320,640a644.65,644.65,0,0,0,6.8,93.48A509.61,509.61,0,0,1,450.48,662.38Z">
                     </path>
                 </g>
-                <animateTransform attributeName="transform" attributeType="XML" type="translate" begin="layerAnimation.end"
-                    values="0 0; 0 -25; 0 150" keyTimes="0; 0.5; 1" fill="freeze" dur="1.5s" repeatCount="" />
+                <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                    begin="layerAnimation.end" values="0 0; 0 -25; 0 150" keyTimes="0; 0.5; 1" fill="freeze" dur="1.5s"
+                    repeatCount="" />
             </g>
             <animateTransform id="layerAnimation" attributeName="transform" begin="0.5s" attributeType="XML" dur="0.5s"
                 from="0 1" to="1 1" fill="freeze" repeatCount="" type="scaleX" calcMode="linear"></animateTransform>
