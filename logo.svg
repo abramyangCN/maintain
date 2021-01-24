@@ -6,30 +6,29 @@
             transform-origin: center;
             transform-box: fill-box;
         }
+
     </style>
 
-    <g id="layer" class="globalLayer" transform-origin="321 555.5" transform="scale(0 1)">
+    <g id="layer" class="globalLayer" transform-origin="center" transform="scale(0 1)">
         <g id="layer_v" class="animate-translate2top">
             <path id="v"
-                d="M957.23,709.25A759.17,759.17,0,0,0,829.42,664.4c-6.8,151.19-79.17,285.3-189.35,374.59-110.46-88.94-183.2-222.81-190.5-373.85a759.43,759.43,0,0,0-126.8,45c22.6,207.75,144.46,385.7,317.18,485.41C812.92,1095.68,934.88,917.38,957.23,709.25Z">
-                <animateTransform id="layerVAnimation" attributeName="transform" attributeType="XML" type="translate"
-                    begin="layerAnimation.end" keyTimes="0; 0.5; 1" values="0 0; 0 25; 0 -256" fill="freeze" dur="1.5s"
-                    repeatCount="" />
+                d="M829.52,662.38C823,813.75,750.46,948,640,1037.13,529.54,948,457,813.75,450.48,662.38a509.61,509.61,0,0,0-123.68,71.1C355.65,930.6,474.35,1098.55,640,1194.37c165.65-95.82,284.35-263.77,313.2-460.89A509.61,509.61,0,0,0,829.52,662.38Z">
             </path>
-
+            <animateTransform id="layerVAnimation" attributeName="transform" attributeType="XML" type="translate"
+                begin="1.5s" keyTimes="0; 0.5; 1" values="0 0; 0 25; 0 -350" fill="freeze" dur="1.5s"
+                repeatCount="" />
         </g>
         <g id="layer_i_a">
             <g id="layer_i" class="animate-translate2bottom">
-                <path id="i" d="M640.28,907.55a515.61,515.61,0,0,0-.56-510.1,515.61,515.61,0,0,0,.56,510.1Z">
-                </path>
+                <path id="i" d="M640,420.53a388.17,388.17,0,0,1,0,438.94,388.17,388.17,0,0,1,0-438.94Z" />
             </g>
             <g id="layer_a" class="animate-translate2bottom">
                 <path id="a"
-                    d="M449.62,665.14Q449,652.65,449,640c0-160.71,74-304.12,189.89-398C755.43,335.86,830,479.72,830,641q0,11.76-.53,23.4a759.17,759.17,0,0,1,127.81,44.85A646.52,646.52,0,0,0,961,640c0-237.47-129.13-444.77-321-555.53C448.13,195.23,319,402.53,319,640a649.48,649.48,0,0,0,3.81,70.12A759.85,759.85,0,0,1,449.62,665.14Z">
+                    d="M450.48,662.38Q450,651.25,450,640c0-160.48,74.12-303.65,190-397.13C755.88,336.35,830,479.52,830,640q0,11.25-.48,22.38a509.61,509.61,0,0,1,123.68,71.1A644.65,644.65,0,0,0,960,640c0-236.89-128.71-443.71-320-554.37C448.71,196.29,320,403.11,320,640a644.65,644.65,0,0,0,6.8,93.48A509.61,509.61,0,0,1,450.48,662.38Z">
                 </path>
             </g>
-            <animateTransform attributeName="transform" attributeType="XML" type="translate" begin="layerAnimation.end"
-                values="0 0; 0 -25; 0 256" keyTimes="0; 0.5; 1" fill="freeze" dur="1.5s" repeatCount="" />
+            <animateTransform attributeName="transform" attributeType="XML" type="translate" begin="1.5s"
+                values="0 0; 0 -25; 0 150" keyTimes="0; 0.5; 1" fill="freeze" dur="1.5s" repeatCount="" />
         </g>
         <animateTransform id="layerAnimation" attributeName="transform" begin="0.5s" attributeType="XML" dur="0.5s"
             from="0 1" to="1 1" fill="freeze" repeatCount="" type="scaleX" calcMode="linear"></animateTransform>
