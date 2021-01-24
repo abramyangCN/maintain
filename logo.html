@@ -6,29 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>logo</title>
     <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
 
-        body {
-            width: 100%;
-            height: 100vh;
-            overflow: hidden
-        }
+       * {
+           padding: 0;
+           margin: 0;
+       }
 
-        svg,
-        .globalLayer {
-            -webkit-transform-origin: center;
-            transform-origin: center;
-            transform-box: fill-box;
-            -webkit-transform-box: fill-box;
-        }
+       body, html {
+           width: 100%;
+           height: 100%;
+       }
 
-        svg {
-            width: 100%;
-            height: 100%;
-        }
+       svg {
+           width: 100%;
+           height: 100%;
+       }
+        
 
         svg * {
             -webkit-transform-origin: center;
@@ -42,7 +35,7 @@
             animation: crafting 4s 0.5s;
         }
 
-        @-webkit-keyframes scaleX {
+        @-webkit-keyframes crafting {
             0% {
                 -webkit-transform: scale(0, 1);
             }
@@ -51,7 +44,27 @@
                 -webkit-transform: scale(1, 1);
             }
 
-            80% {
+            60% {
+                -webkit-transform: scale(1, 1);
+            }
+
+            70% {
+                -webkit-transform: scale(1.1, 0.95) rotate(0deg)
+            }
+
+            74% {
+                -webkit-transform: scale(1.1, 0.95) rotate(-5deg)
+            }
+
+            78% {
+                -webkit-transform: scale(1.1, 0.95) rotate(5deg)
+            }
+
+            82% {
+                -webkit-transform: scale(1.1, 0.95) rotate(0deg)
+            }
+
+            90% {
                 -webkit-transform: scale(1, 1);
                 opacity: 1;
 
@@ -72,7 +85,31 @@
                 transform: scale(1, 1);
             }
 
-            80% {
+            60% {
+                transform: scale(1, 1);
+            }
+
+            65% {
+                transform: scale(1.15);
+            }
+
+            70% {
+                transform: scale(1.1, 0.95) rotate(0deg)
+            }
+
+            74% {
+                transform: scale(1.1, 0.95) rotate(-5deg)
+            }
+
+            78% {
+                transform: scale(1.1, 0.95) rotate(5deg)
+            }
+
+            82% {
+                transform: scale(1.1, 0.95) rotate(0deg)
+            }
+
+            90% {
                 transform: scale(1, 1);
                 opacity: 1;
 
@@ -88,7 +125,7 @@
 </head>
 
 <body>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1280" class="svg-logo" id="svgLogo">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1280" id="svgLogo">
 
         <style>
             svg * {
@@ -99,13 +136,13 @@
 
         </style>
 
-        <g id="layer" class="globalLayer" transform-origin="center" transform="scale(1 1)">
+        <g id="layer" class="svg-logo" transform-origin="center" transform="scale(1 1)">
             <g id="layer_v" class="animate-translate2top">
                 <path id="v"
                     d="M829.52,662.38C823,813.75,750.46,948,640,1037.13,529.54,948,457,813.75,450.48,662.38a509.61,509.61,0,0,0-123.68,71.1C355.65,930.6,474.35,1098.55,640,1194.37c165.65-95.82,284.35-263.77,313.2-460.89A509.61,509.61,0,0,0,829.52,662.38Z">
                 </path>
                 <animateTransform id="layerVAnimation" attributeName="transform" attributeType="XML" type="translate"
-                    begin="1.5s" keyTimes="0; 0.5; 1" values="0 0; 0 25; 0 -350" fill="freeze" dur="1.5s"
+                    begin="layerAnimation.end" keyTimes="0; 0.5; 1" values="0 0; 0 25; 0 -350" fill="freeze" dur="1.5s"
                     repeatCount="" />
             </g>
             <g id="layer_i_a">
@@ -117,16 +154,17 @@
                         d="M450.48,662.38Q450,651.25,450,640c0-160.48,74.12-303.65,190-397.13C755.88,336.35,830,479.52,830,640q0,11.25-.48,22.38a509.61,509.61,0,0,1,123.68,71.1A644.65,644.65,0,0,0,960,640c0-236.89-128.71-443.71-320-554.37C448.71,196.29,320,403.11,320,640a644.65,644.65,0,0,0,6.8,93.48A509.61,509.61,0,0,1,450.48,662.38Z">
                     </path>
                 </g>
-                <animateTransform attributeName="transform" attributeType="XML" type="translate" begin="1.5s"
+                <animateTransform attributeName="transform" attributeType="XML" type="translate" begin="layerAnimation.end"
                     values="0 0; 0 -25; 0 150" keyTimes="0; 0.5; 1" fill="freeze" dur="1.5s" repeatCount="" />
             </g>
-            <!-- <animateTransform id="layerAnimation" attributeName="transform" begin="0.5s" attributeType="XML" dur="0.5s"
+            <animateTransform id="layerAnimation" attributeName="transform" begin="0.5s" attributeType="XML" dur="0.5s"
                 from="0 1" to="1 1" fill="freeze" repeatCount="" type="scaleX" calcMode="linear"></animateTransform>
             <animateTransform attributeName="transform" attributeType="XML" begin="layerVAnimation.end" dur="1s"
-                values="1 1; 1 1; 10 10" keyTimes="0; 0.5; 1" fill="freeze" repeatCount="" type="scale" calcMode="linear">
+                values="1 1; 1 1; 10 10" keyTimes="0; 0.5; 1" fill="freeze" repeatCount="" type="scale"
+                calcMode="linear">
             </animateTransform>
             <animate attributeName="opacity" attributeType="XML" begin="layerVAnimation.end" dur="1s" values="1; 1; 0"
-                keyTimes="0; 0.5; 1" fill="freeze" repeatCount="" type="opacity" calcMode="linear"></animate> -->
+                keyTimes="0; 0.5; 1" fill="freeze" repeatCount="" type="opacity" calcMode="linear"></animate>
         </g>
     </svg>
 
