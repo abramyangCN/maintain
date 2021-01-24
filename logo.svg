@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1280" class="animate" x="160">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1280" class="animate">
 
     <style>
         .animate {
-            transition: all 1s ease-in-out 0.2s;
+            transform-orgin: 50% 50%;
         }
 
         .animate-translate2top {
