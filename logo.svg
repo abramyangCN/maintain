@@ -1,23 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1280" transform-origin="center center" class="animate">
 
     <style>
-        .animate .globalLayer {
+        .globalLayer {
             -webkit-transform-origin: center center;
             transform-origin: center center;
             transform-box: fill-box;
             -webkit-transform-box: fill-box;
         }
-
-        .animate-translate2top {
-            transition: inherit;
-            // transform: translateY(-20%)
-        }
-
-        .animate-translate2bottom {
-            transition: inherit;
-            // transform: translateY(20%) 
-        }
-
     </style>
 
     <g id="layer" class="globalLayer" transform-origin="center center" transform="scale(0 1)">
